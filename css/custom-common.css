@@ -1,0 +1,91 @@
+body{
+	margin: 0;
+}
+.nav-bar{
+	background-color: hsl(221deg 46% 20%);
+	display: inline-flex;
+	width: 100%;
+	padding: 15px 0 15px 0;
+}
+.logo{
+	width: 50%;
+	color: white;
+	margin-left: 50px;
+}
+.menu-bar{
+	width: 50%;
+    text-align: right;
+    margin-right: 50px;
+}
+.menu-bar a{
+	color: white;
+	text-decoration: none;
+    text-transform: uppercase;
+    margin: 10px;
+}
+.banner{
+	background-image: url(https://www.w3schools.com/css/mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    color: white;
+    padding-top: 120px;
+	padding-bottom: 120px;
+	text-transform: uppercase;
+}
+.banner hr{
+	background: #408b87;
+    width: 12%;
+    height: 4px;
+    border-color: #408b87;
+    margin-bottom: 50px;
+}
+.banner  h2{
+	margin-top: 0;
+	
+}
+.btn{
+	border-radius: 5px;
+    padding: 9px;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+}
+.btn-info{
+	background: lightblue;
+}
+.btn-success{
+	background: green;
+}	
+.btn-danger{
+	background: red;
+}
+.info-bar{
+	background: hsl(0deg 0% 91%);
+	color: hsl(176deg 34% 29%);
+	text-align: center;
+}
+.info-bar h2{ 
+	margin: 0;
+	padding: 15px;
+}
+.info-bar .ract{
+	border: 1px solid hsl(176deg 34% 29%);
+}
+.mydiv{
+	display: inline-flex;
+	width: 100%;
+	margin-top: 100px;
+}
+.mydiv .cirle-div{
+	width: 33.333%;
+	text-align: center;
+}
+.mydiv .cirle-div h2{
+    margin-top: 55px;
+}
+.cirle-div .circle{
+	border: 1px solid hsl(176deg 34% 29%);
+	padding: 50px;
+    border-radius: 50%;
+}
