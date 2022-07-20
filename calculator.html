@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Calculator</h1>
+	<input type="number" placeholder="Enter 1st number" id="number1">
+	<input type="number" placeholder="Enter 2nd number" id="number2">
+
+	<input type="button" value="+" id="plus_btn" class="btn">
+	<input type="button" value="-" id="minus_btn" class="btn">
+	<input type="button" value="*" id="multi_btn" class="btn">
+	<input type="button" value="/" id="div_btn" class="btn">
+	
+	<input type="number" placeholder="Your result will be show here" id="result">
+	
+	<script type="text/javascript">
+		// $('#plus_btn').on('click',function(){
+		// 	var input1 = $('#number1').val();
+		// 	var input2 = $('#number2').val();
+		// 	var input3 = parseInt(input1) + parseInt(input2);
+		// 	$('#result').val(input3);
+		// });
+
+		// $('#minus_btn').on('click',function(){
+		// 	var input1 = $('#number1').val();
+		// 	var input2 = $('#number2').val();
+		// 	var input3 = parseInt(input1) - parseInt(input2);
+		// 	$('#result').val(input3);
+		// });
+
+		// $('#multi_btn').on('click',function(){
+		// 	var input1 = $('#number1').val();
+		// 	var input2 = $('#number2').val();
+		// 	var input3 = parseInt(input1) * parseInt(input2);
+		// 	$('#result').val(input3);
+		// });
+
+		// $('#div_btn').on('click',function(){
+		// 	var input1 = $('#number1').val();
+		// 	var input2 = $('#number2').val();
+		// 	var input3 = parseInt(input1) / parseInt(input2);
+		// 	$('#result').val( input3 );
+		// });
+
+		$('.btn').on('click',function(){
+			var operation = $(this).val();
+			var input1 = $('#number1').val();
+			var input2 = $('#number2').val();
+
+			if(operation == '+'){
+				var input3 = parseInt(input1) + parseInt(input2);
+			}else (operation == '-'){
+				var input3 = parseInt(input1) - parseInt(input2);
+			}else if(operation == '*'){
+				var input3 = parseInt(input1) * parseInt(input2);
+			}else{
+				var input3 = parseInt(input1) / parseInt(input2);
+			}
+			$('#result').val( input3 );
+		});
+
+	</script>
+</body>
+</html>
