@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/jquery.min.js"></script>
+	<style type="text/css">
+		#mydiv1{
+			height: 150px;
+			width: 150px;
+			color: white;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="left()">Left</button>
+	<button onclick="right()">Right</button>
+	<button onclick="up()">Up</button>
+	<button onclick="downfunction()">Down</button>
+	<div id="mydiv1" style="margin-left:0;margin-right:0;margin-top:0;margin-bottom:0"></div>
+
+	<script type="text/javascript">
+		
+	
+		function right(){
+			var currCss = $('#mydiv1').css('margin-left');
+			var currentNumber = parseInt(currCss);
+			var newNumber = currentNumber + 150;
+			var newMargin = newNumber + 'px';
+			$('#mydiv1').animate({'margin-left': newMargin});
+		};
+
+		function left(){
+			var currCss = $('#mydiv1').css('margin-left');
+			var currentNumber = parseInt(currCss);
+			var newNumber = currentNumber - 150;
+			var newMargin = newNumber + 'px';
+			$('#mydiv1').animate({'margin-left': newMargin});
+		};
+
+		function up(){
+			$('#mydiv1').animate({'margin-top': "0"});
+		};
+
+		function downfunction(){
+			var currCss = $('#mydiv1').css('margin-top');
+			var currentNumber = parseInt(currCss);
+			var newNumber = currentNumber + 150;
+			var newMargin = newNumber + 'px';
+			$('#mydiv1').animate({'margin-top': newMargin});
+		};
+
+	
+	</script>	
+</body>
+</html>
