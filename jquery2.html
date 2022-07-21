@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="div1">
+		What is Lorem Ipsum?
+		Lorem Ipsum is simply dummy text of 
+	</div>
+	<a href="#" id="clickme1">Click me1</a>
+
+	<a href="#" id="clickme2">Click me2</a>
+
+	<a href="#" onclick="myFunction()">clickme3</a>
+<br><br>
+	<div id="dummytext">
+		What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<span id="read_more_text"> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</span>
+<a href="#" id="read_more">Read more...</a>
+<a href="#" id="hide_more">Hide...</a>
+
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		$('#read_more_text').hide();
+		$('#hide_more').hide();
+		$('#read_more').on('click',function(){
+			$('#read_more_text').show();
+			$('#read_more').hide();
+			$('#hide_more').show();
+		})
+		$('#hide_more').on('click',function(){
+			$('#read_more_text').hide();
+			$('#read_more').show();
+			$('#hide_more').hide();
+		})
+
+		$('#clickme1').on('click',function(){
+			console.log('clickme  function');
+			//$('#div1').text('<b>fafafafaf</b>');
+			$('#div1').html("<b style='color:red'>fafafafaf</b>");
+			//$('#div1').append('fafafafaf');
+		});
+		
+		$('#clickme2').click(function(){
+			console.log('clickme  function');
+			$('#div1').prepend('<b>hello how are u</b>');
+		});
+
+		function myFunction(){
+			console.log('myFunction');
+		};
+	</script>
+</body>
+</html>
