@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="js/jquery.min.js"></script>
+	<style type="text/css">
+		#mydiv1{
+			height: 50px;
+			width: 50px;
+			color: white;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="mydiv1" style="margin-left:0;margin-top:0;"></div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log('doc ready');
+		});
+		$(document).on('keyup',function(){
+			//console.log('keyup');
+		})
+		$(document).on('keydown',function(event){
+			//	console.log('keyDown');
+			//console.log(event.which);
+			// 37 = left   38=>up,  39=> right  40=>down
+
+			// ---- For right move
+			if( (event.which == 39) ||  (event.which == 68) ){
+				var currCss = $('#mydiv1').css('margin-left');
+				var currentNumber = parseInt(currCss);
+				var newNumber = currentNumber + 50;
+				var newMargin = newNumber + 'px';
+				$('#mydiv1').animate({'margin-left': newMargin});
+			}
+
+			// ---- For left move-----------
+			if( (event.which == 37) ||  (event.which == 65) ){
+				var currCss = $('#mydiv1').css('margin-left');
+				var currentNumber = parseInt(currCss);
+				var newNumber = currentNumber - 50;
+				var newMargin = newNumber + 'px';
+				$('#mydiv1').animate({'margin-left': newMargin});
+			}
+		})
+	</script>
+</body>
+</html>
