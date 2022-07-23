@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="js/jquery.min.js"></script>
+	<style type="text/css">
+		.title{
+			font-size: 30px;
+			cursor: pointer;
+		}
+		.description{
+			display: none;
+		}
+		.main{
+			width: 40%;
+			border: 1px solid #80808052;
+		}
+		.active{
+			border-color: blue;
+			color: orange;
+		}
+	</style>
+</head>
+<body>
+		<div class="main">
+			<div class="title">What are the fees for registration?</div>
+			<div class="description">
+				There is no registration fee or any other charges. You can register free and join 30 days online class FREE OF COST.
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="title">What are the fees for registration?</div>
+			<div class="description">
+				There is no registration fee or any other charges. You can register free and join 30 days onlinYou will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.e class FREE OF COST.
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="title">What are the fees for registration?</div>
+			<div class="description">
+				There is no registration fee or any other charges. You can register free and join 30 daysYou will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class. online class FREE OF COST.
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="title">What are the fees for registration?</div>
+			<div class="description">
+				There is no registration fee or any otheYou will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.r charges. You can register free and join 30 days online class FREE OF COST.
+			</div>
+		</div>
+
+		<div class="main">
+			<div class="title">What are the fees for registration?</div>
+			<div class="description">
+				There is no registration fee or any other charges. You can register You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.free and join 30 days online class FREE OF COST.
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('.title').on('click',function(){
+				$('.description').hide();
+
+				var active = $(this).parent().hasClass('active');
+				if(active){
+					$('.main').removeClass('active');
+					$(this).parent().find('.description').hide(500);
+				}else{
+					$('.main').removeClass('active');
+					$(this).parent().addClass('active');
+					$(this).parent().find('.description').show(500);
+				}
+
+
+			});
+		</script>
+</body>
+</html>
