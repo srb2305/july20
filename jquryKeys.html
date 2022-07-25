@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script src="js/jquery.min.js"></script>
+	<style type="text/css">
+		.mybox{
+			background: red;
+			height: 50px;
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>jquryKeys</h1>
+	<div class="mybox"></div>
+
+	<script type="text/javascript">
+		const rightInterval = setInterval(right, 100);
+		const bottomInterval = setInterval(bottom, 100);
+		
+		$(document).ready(function(){
+			//right();
+		})
+
+		$(document).on('keydown',function(event){
+			if(event.which == 37){
+				console.log('left');
+			}
+
+			if(event.which == 38){
+				console.log('up');
+			}
+
+			if(event.which == 39){
+				setInterval(right2, 100);
+			}
+
+			if(event.which == 40){
+				setInterval(bottom2, 100);
+			}
+		});
+
+
+		function right(){
+			clearInterval(bottomInterval);
+			var currentMargin = $('.mybox').css('margin-left');
+			currentMargin = parseInt(currentMargin);
+			var newMargin = currentMargin + 2;
+			$('.mybox').css('margin-left', newMargin+'px');
+		};
+
+		function bottom(){
+			clearInterval(rightInterval);
+			var currentMargin = $('.mybox').css('margin-top');
+			currentMargin = parseInt(currentMargin);
+			var newMargin = currentMargin + 2;
+			$('.mybox').css('margin-top', newMargin+'px');
+		}
+
+
+
+	</script>
+</body>
+</html>
