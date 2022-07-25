@@ -20,39 +20,57 @@
 			border-color: blue;
 			color: orange;
 		}
+		.toggleIcon{
+			float: right;
+		}
 	</style>
 </head>
 <body>
 		<div class="main">
-			<div class="title">What are the fees for registration?</div>
+			<div class="title">
+				What are the fees for registration?
+				<span class="toggleIcon">+</span>
+			</div>
 			<div class="description">
 				There is no registration fee or any other charges. You can register free and join 30 days online class FREE OF COST.
 			</div>
 		</div>
 
 		<div class="main">
-			<div class="title">What are the fees for registration?</div>
+			<div class="title">
+				What are the fees for registration?
+				<span class="toggleIcon">+</span>
+			</div>
 			<div class="description">
 				There is no registration fee or any other charges. You can register free and join 30 days onlinYou will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.e class FREE OF COST.
 			</div>
 		</div>
 
 		<div class="main">
-			<div class="title">What are the fees for registration?</div>
+			<div class="title">
+				What are the fees for registration?
+				<span class="toggleIcon">+</span>
+			</div>
 			<div class="description">
 				There is no registration fee or any other charges. You can register free and join 30 daysYou will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class. online class FREE OF COST.
 			</div>
 		</div>
 
 		<div class="main">
-			<div class="title">What are the fees for registration?</div>
+			<div class="title">
+				What are the fees for registration?
+				<span class="toggleIcon">+</span>
+			</div>
 			<div class="description">
 				There is no registration fee or any otheYou will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.r charges. You can register free and join 30 days online class FREE OF COST.
 			</div>
 		</div>
 
 		<div class="main">
-			<div class="title">What are the fees for registration?</div>
+			<div class="title">
+				What are the fees for registration?
+				<span class="toggleIcon">+</span>
+			</div>
 			<div class="description">
 				There is no registration fee or any other charges. You can register You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.You will get 100% practical knowledge, We focus only on quality. 6+ year experience trainer will conduct your class.free and join 30 days online class FREE OF COST.
 			</div>
@@ -60,7 +78,7 @@
 		<script type="text/javascript">
 			$('.title').on('click',function(){
 				$('.description').hide();
-
+				$('.toggleIcon').text('+');
 				var active = $(this).parent().hasClass('active');
 				if(active){
 					$('.main').removeClass('active');
@@ -69,6 +87,7 @@
 					$('.main').removeClass('active');
 					$(this).parent().addClass('active');
 					$(this).parent().find('.description').show(500);
+					$(this).parent().find('.toggleIcon').text('-');
 				}
 
 
